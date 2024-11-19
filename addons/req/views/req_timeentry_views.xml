@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="req_timeentry_form" model="ir.ui.view">
+        <field name="name">req.timeentry.form</field>
+        <field name="model">req.timeentry</field>
+        <field name="arch" type="xml">
+            <form string="Task">
+                <group col="10">
+                    <group colspan="7">
+                        <field name="at_id"/>
+                        <field name="at_product_ids" invisible="True"/>
+                    </group>
+                    <group colspan="3">
+                        <field name="duration" widget="float_time"/>
+                    </group>
+                </group>
+                <group col="10">
+                    <group string="Activity" colspan="5">
+                    </group>
+                    <group string="Product" colspan="5">
+                        <field name="product_id" invisible="not at_product_ids"/>
+                        <field name="product_component_ids" invisible="True"/>
+                        <field name="component_id" invisible="not product_component_ids"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="req_timeentry_action" model="ir.actions.act_window">
+        <field name="name">Time entry</field>
+        <field name="res_model">req.timeentry</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>
