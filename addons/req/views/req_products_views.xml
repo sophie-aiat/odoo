@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<odoo>
-    <record id="req_products_action" model="ir.actions.act_window">
-        <field name="name">Components</field>
-        <field name="res_model">req.components</field>
-        <field name="view_mode">list,form</field>
-    </record>
-</odoo>

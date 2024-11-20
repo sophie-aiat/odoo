@@ -1,13 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="crm_at_view_tree" model="ir.ui.view">
-        <field name="name">req.at.tree</field>
+    <record id="crm_at_view_list" model="ir.ui.view">
+        <field name="name">req.at.list</field>
         <field name="model">req.at</field>
         <field name="arch" type="xml">
             <list>
                 <field name="name"/>
-                <field name="product_ids"/>
+                <field name="product_string"/>
             </list>
+        </field>
+    </record>
+
+    <record id="crm_at_view_form" model="ir.ui.view">
+        <field name="name">req.at.form</field>
+        <field name="model">req.at</field>
+        <field name="arch" type="xml">
+            <form>
+                <group string="Name">
+                    <field name="id" invisible="True"/>
+                    <field name="name" string=""/>
+                </group>
+                <group string='Products'>
+                    <field name="product_ids" string="">
+                        <list>
+                            <field name="name"/>
+                            <field name="component_string"/>
+                            <control>
+                                <create string="Add a product" context="{'at_id':'id'}"/>
+                            </control>
+                        </list>
+                    </field>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="crm_product_view_form" model="ir.ui.view">
+        <field name="name">req.product.form</field>
+        <field name="model">req.product</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group string="Name">
+                        <field name="id" invisible="True"/>
+                        <field name="name" string=""/>
+                    </group>
+                    <group string="Atelier">
+                        <field name="at_id" string="" readonly='True'/>
+                    </group>
+                </group>
+                <group string='Components'>
+                    <field name="component_ids" string="">
+                        <list editable='bottom'>
+                            <field name="name"/>
+                             <control>
+                                <create string="Add a component"/>
+                            </control>
+                        </list>
+                    </field>
+                </group>
+            </form>
         </field>
     </record>
 

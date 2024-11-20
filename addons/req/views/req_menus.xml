@@ -3,10 +3,7 @@
     <data>
         <menuitem id="req_menu_root" name="Requirements">
             <menuitem id="req_timesheet_menu" action="req_timesheet_action"/>
-            <menuitem id="req_first_level_menu" name="Options">
-                <menuitem id="req_at_menu_action" action="req_at_action"/>
-                <menuitem id="req_products_menu_action" action="req_products_action"/>
-            </menuitem>
+            <menuitem id="req_at_menu" action="req_at_action"/>
         </menuitem>
     </data>
 </odoo>
