@@ -1,6 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 req.access_req_at,access_req_at,req.model_req_at,base.group_user,1,1,1,1
-req.access_req_products,access_req_products,req.model_req_products,base.group_user,1,1,1,1
-req.access_req_components,access_req_components,req.model_req_components,base.group_user,1,1,1,1
+req.access_req_product,access_req_product,req.model_req_product,base.group_user,1,1,1,1
+req.access_req_component,access_req_component,req.model_req_component,base.group_user,1,1,1,1
 req.access_req_timesheet,access_req_timesheet,req.model_req_timesheet,base.group_user,1,1,1,1
 req.access_req_timeentry,access_req_timeentry,req.model_req_timeentry,base.group_user,1,1,1,1
